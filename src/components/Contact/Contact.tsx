@@ -1,8 +1,18 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  FormControl,
+  FormLabel,
+  Heading,
+  Input,
+  Text,
+  Textarea,
+} from "@chakra-ui/react";
 import React, { FC } from "react";
 import EventCard from "../Global/EventCard";
 import { ebGaramond } from "@/lib/fonts";
-import styles from "./contact.module.css";
 
 type ContactCompProps = {};
 
@@ -10,7 +20,7 @@ const Contact: FC<ContactCompProps> = ({}) => {
   return (
     <Flex
       px={{ base: 0, lg: 20 }}
-      flexDir={{ base: "column", lg: "row" }}
+      flexDir={{ base: "column", xl: "row" }}
       justifyContent="space-between"
       gap={{ base: 4, md: 8, lg: 10, xl: 20 }}
     >
@@ -31,82 +41,146 @@ const Contact: FC<ContactCompProps> = ({}) => {
         textAlign="center"
         p={10}
         letterSpacing={2}
-        fontFamily={ebGaramond.className}
-        textColor="#333333"
+        fontFamily="BrandonGrot"
+        fontWeight={300}
       >
-        <div className={styles.container}>
-          <h1 className={styles.heading}>
+        <Container py={4}>
+          <Text
+            mb={8}
+            textAlign="center"
+            fontFamily={ebGaramond.className}
+            textColor="#333333"
+            fontSize={22}
+            letterSpacing={3}
+          >
             Please fill out this form and we will get back to you shortly
-          </h1>
-          <form className={styles.form}>
-            <div className={styles.formControl}>
-              <label htmlFor="first-name" className={styles.label}>
-                Enter Your Name *
-              </label>
-              <input
-                id="first-name"
-                type="text"
-                placeholder="Name"
-                className={styles.input}
-                required
-              />
-            </div>
-            <div className={styles.formControl}>
-              <label htmlFor="last-name" className={styles.label}>
-                Enter Your Last Name *
-              </label>
-              <input
-                id="last-name"
-                type="text"
-                placeholder="Last Name"
-                className={styles.input}
-                required
-              />
-            </div>
-            <div className={styles.formControl}>
-              <label htmlFor="phone" className={styles.label}>
-                Enter Your Phone *
-              </label>
-              <input
-                id="phone"
-                type="tel"
-                placeholder="Phone"
-                className={styles.input}
-                required
-              />
-            </div>
-            <div className={styles.formControl}>
-              <label htmlFor="email" className={styles.label}>
-                Enter Your Email *
-              </label>
-              <input
-                id="email"
-                type="email"
-                placeholder="Email"
-                className={styles.input}
-                required
-              />
-            </div>
-            <div
-              className={styles.formControl}
-              style={{ gridColumn: "span 2" }}
-            >
-              <label htmlFor="message" className={styles.label}>
-                Type Your Message Here *
-              </label>
-              <textarea
-                id="message"
+          </Text>
+          <form>
+            <Flex direction={{ base: "column", md: "row" }} mb={4} gap={6}>
+              <FormControl id="first-name" isRequired>
+                <FormLabel fontWeight={300}>Enter Your Name</FormLabel>
+                <Input
+                  type="text"
+                  placeholder="Name"
+                  _placeholder={{ px: 2, textColor: `#AF9453` }}
+                  variant="unstyled"
+                  mt={2}
+                  borderBottom="1px solid"
+                  borderColor="gray.400"
+                  borderRadius="none"
+                  _hover={{
+                    border: "1px solid",
+                    borderColor: "gray.500",
+                    borderRadius: "sm",
+                  }}
+                  _focus={{
+                    border: "1px solid",
+                    borderColor: "gray.500",
+                    borderRadius: "sm",
+                  }}
+                />
+              </FormControl>
+              <FormControl id="last-name">
+                <FormLabel fontWeight={300}>Enter Your Last Name</FormLabel>
+                <Input
+                  type="text"
+                  placeholder="Last Name"
+                  _placeholder={{ px: 2, textColor: `#AF9453` }}
+                  variant="unstyled"
+                  mt={2}
+                  borderBottom="1px solid"
+                  borderColor="gray.400"
+                  borderRadius="none"
+                  _hover={{
+                    border: "1px solid",
+                    borderColor: "gray.500",
+                    borderRadius: "sm",
+                  }}
+                  _focus={{
+                    border: "1px solid",
+                    borderColor: "gray.500",
+                    borderRadius: "sm",
+                  }}
+                />
+              </FormControl>
+            </Flex>
+            <Flex direction={{ base: "column", md: "row" }} mb={4} gap={4}>
+              <FormControl id="phone" isRequired>
+                <FormLabel fontWeight={300}>Enter Your Phone</FormLabel>
+                <Input
+                  type="tel"
+                  placeholder="Phone"
+                  _placeholder={{ px: 2, textColor: `#AF9453` }}
+                  variant="unstyled"
+                  mt={2}
+                  borderBottom="1px solid"
+                  borderColor="gray.400"
+                  borderRadius="none"
+                  _hover={{
+                    border: "1px solid",
+                    borderColor: "gray.500",
+                    borderRadius: "sm",
+                  }}
+                  _focus={{
+                    border: "1px solid",
+                    borderColor: "gray.500",
+                    borderRadius: "sm",
+                  }}
+                />
+              </FormControl>
+              <FormControl id="email" isRequired>
+                <FormLabel fontWeight={300}>Enter Your Email</FormLabel>
+                <Input
+                  type="email"
+                  placeholder="Email"
+                  _placeholder={{ px: 2, textColor: `#AF9453` }}
+                  mt={2}
+                  variant="unstyled"
+                  borderBottom="1px solid"
+                  borderColor="gray.400"
+                  borderRadius="none"
+                  _hover={{
+                    border: "1px solid",
+                    borderColor: "gray.500",
+                    borderRadius: "sm",
+                  }}
+                  _focus={{
+                    border: "1px solid",
+                    borderColor: "gray.500",
+                    borderRadius: "sm",
+                  }}
+                />
+              </FormControl>
+            </Flex>
+            <FormControl id="message" isRequired mb={4}>
+              <FormLabel fontWeight={300}>Type Your Message Here</FormLabel>
+              <Textarea
                 placeholder="Type your message here..."
-                className={styles.textarea}
-                rows={4}
-                required
+                _placeholder={{ px: 2, textColor: `#AF9453` }}
+                variant="unstyled"
+                borderBottom="1px solid"
+                mt={2}
+                borderColor="gray.400"
+                borderRadius="none"
+                _hover={{
+                  border: "1px solid",
+                  borderColor: "gray.500",
+                  borderRadius: "md",
+                }}
+                _focus={{
+                  border: "1px solid",
+                  borderColor: "gray.500",
+                  borderRadius: "md",
+                }}
               />
-            </div>
-            <button type="submit" className={styles.submitButton}>
-              Submit
-            </button>
+            </FormControl>
+            <Box textAlign="center">
+              <Button type="submit" variant="none" mt={4}>
+                Submit
+              </Button>
+            </Box>
           </form>
-        </div>
+        </Container>
       </Flex>
     </Flex>
   );
