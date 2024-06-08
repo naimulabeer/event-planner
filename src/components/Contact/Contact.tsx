@@ -62,7 +62,8 @@ const Contact: FC<ContactCompProps> = ({}) => {
                 <Input
                   type="text"
                   placeholder="Name"
-                  _placeholder={{ px: 2, textColor: `#AF9453` }}
+                  _placeholder={{ textColor: `#AF9453` }}
+                  px={2}
                   variant="unstyled"
                   mt={2}
                   borderBottom="1px solid"
@@ -85,8 +86,9 @@ const Contact: FC<ContactCompProps> = ({}) => {
                 <Input
                   type="text"
                   placeholder="Last Name"
-                  _placeholder={{ px: 2, textColor: `#AF9453` }}
+                  _placeholder={{ textColor: `#AF9453` }}
                   variant="unstyled"
+                  px={2}
                   mt={2}
                   borderBottom="1px solid"
                   borderColor="gray.400"
@@ -110,7 +112,8 @@ const Contact: FC<ContactCompProps> = ({}) => {
                 <Input
                   type="tel"
                   placeholder="Phone"
-                  _placeholder={{ px: 2, textColor: `#AF9453` }}
+                  _placeholder={{ textColor: `#AF9453` }}
+                  px={2}
                   variant="unstyled"
                   mt={2}
                   borderBottom="1px solid"
@@ -133,7 +136,8 @@ const Contact: FC<ContactCompProps> = ({}) => {
                 <Input
                   type="email"
                   placeholder="Email"
-                  _placeholder={{ px: 2, textColor: `#AF9453` }}
+                  _placeholder={{ textColor: `#AF9453` }}
+                  px={2}
                   mt={2}
                   variant="unstyled"
                   borderBottom="1px solid"
@@ -156,7 +160,8 @@ const Contact: FC<ContactCompProps> = ({}) => {
               <FormLabel fontWeight={300}>Type Your Message Here</FormLabel>
               <Textarea
                 placeholder="Type your message here..."
-                _placeholder={{ px: 2, textColor: `#AF9453` }}
+                px={2}
+                _placeholder={{ textColor: `#AF9453` }}
                 variant="unstyled"
                 borderBottom="1px solid"
                 mt={2}

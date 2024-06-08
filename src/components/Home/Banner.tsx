@@ -45,14 +45,14 @@ const Banner: FC<BannerProps> = ({}) => {
             inlineSize="min-content"
             fontSize={{ base: 30, md: 60 }}
             letterSpacing={{ base: 4, md: 10 }}
-            textColor="#6d179e"
+            textColor="#FFFFFF"
             fontWeight={600}
           >
             Creating Unforgettable Memories
           </Text>
           <Button label="Discovery Call" w="fit-content" />
           <Link to="services" smooth duration={500}>
-            <BsArrowDown size={40} color="#6d179e" cursor="pointer" />
+            <BsArrowDown size={40} color="#FFFFFF" cursor="pointer" />
           </Link>
         </Flex>
       </Box>
