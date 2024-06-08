@@ -13,7 +13,7 @@ type ServicePageProps = {};
 const Page: FC<ServicePageProps> = ({}) => {
   return (
     <Column gap={6} mb={10} mt={10}>
-      <HeroTitle title="Services" fontSize={16} />
+      <HeroTitle title="Services" fontSize={18} />
       <HeroTitle title="Weddings" />
       <Services services={weddingServices} />
       <HeroTitle title="PRIVATE PARTIES" />
