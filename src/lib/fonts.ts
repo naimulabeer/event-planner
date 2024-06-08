@@ -1,6 +1,6 @@
-import { EB_Garamond } from 'next/font/google';
+import { EB_Garamond } from "next/font/google";
 
 export const ebGaramond = EB_Garamond({
-	subsets: ['latin'],
-	weight: ['400', '500', '600', '700'],
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
